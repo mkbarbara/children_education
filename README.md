@@ -10,7 +10,7 @@ Run this code in terminal:\
 \
 `node back-end/server.js`\
 \
-If you done everything successfully you will see:\
+If you done everything successfully in terminal you will see:\
 \
 `Server running on port 3000`\
 `Connected to MySQL database`\
