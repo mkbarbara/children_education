@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JoyLearn - Personal Account</title>
+        <meta charset="utf-8">
+        <link href="styling/personal_style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+              <button class="btn" onclick="showCurriculum()">Curriculum</button>
+              <button class="btn" onclick="showClasses()">Classes</button>
+              <button class="btn" onclick="showProgress()">Progress</button>
+              <button class="btn" onclick="showAboutUs()">About Us</button>
+            </div>
+    
+            <div class="navbar-right">
+              <button class="btn btn-w-icon active" onclick="showPersonalAccount()"><i class="fa-regular fa-user"></i></button>
+              <button class="btn btn-w-icon btn-not" onclick="showNotifications()"><i class="fa-regular fa-bell"></i><p class="notifications-number"></p></button>
+              <div id="notifications-dropdown" class="dropdown">
+                <div class="dropdown-content">
+                  <h3 class="dropdown-title">Notifications</h3>
+                  <ul id="notifications-list" class="notifications-list">
+                    <li class="notification">Notification 1</li>
+                    <li class="notification">Notification 2</li>
+                    <li class="notification">Notification 3</li>
+                  </ul>
+                  <button class="show-notifications">Show all notifications</button>
+                </div>
+              </div>
+              <button class="btn btn-w-icon" onclick="showChat()"><i class="fa-regular fa-comments"></i></button>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="profile">
+                <div class="image-wrapper">
+                    <img id="profile-image" class="profile-image" alt="Profile Image">
+                    <div class="overlay">
+                      <i class="fas fa-image"></i>
+                    </div>
+                </div>
+              <input type="file" id="image-input" accept="image/jpeg, image/png">
+            </div>
+            <h1>Personal Info</h1>
+            <div class="fields">
+                <div class="field">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" class="input-text" name="firstName" placeholder="Enter your name">
+                </div>
+                <div class="field">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" class="input-text" name="lastName" placeholder="Enter your name">
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="input-text" name="email" placeholder="Enter your email">
+                </div>
+                <div class="field">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" class="input-text" name="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="field">
+                    <label for="birth">Date of birth:</label>
+                    <input type="date" id="birth" class="input-text" name="birth" placeholder="Enter your phone number">
+                </div>
+                <div class="field">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" class="input-text" name="country" placeholder="Enter your country">
+                </div>
+                <div class="field">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" class="input-text" name="city" placeholder="Enter your city">
+                </div>
+                <div class="save-changes">
+                    <button class="btn-body" id="save-changes">Save Changes</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Choose The Areas of Study</h1>
+            <div class="study-container">
+                <div class="chosen-subjects">
+                    <h2>Chosen subjects</h2>
+                    <ul class="list-items" id="chosen-list"></ul>
+                </div>
+                <div class="variants">
+                    <div class="dropdown" id="area-dropdown">
+                        <div class='select-btn'>
+                            <span class="btn-text">Select Areas of Study</span>
+                            <span class="arrow-down">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <ul class="list-items" id="variants-list">
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">Natural Sciences</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">Computer Sciences</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">Social Sciences</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cards">
+                        <div class="card natural-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">General Biology</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Biology is the study of living things, including plants, animals, and humans. It investigates growth, reproduction, and interactions with the environment. Biology reveals the diversity of plants and animals, their survival mechanisms, and interconnectedness in nature. It unveils the fascinating world of living creatures and their thriving existence.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card natural-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">General Chemistry</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Chemistry is the science that deals with the properties, composition, and behavior of substances. It explores different materials, such as liquids, solids, and gases, and how they can change when they interact with each other. Chemistry helps us understand how things are made, why some things dissolve in water while others don't, and how different substances can react to create new substances. It's like discovering the magic behind mixtures, reactions, and the building blocks of matter.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card natural-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">General Physics</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Physics is the science that studies energy, motion, and the behavior of matter and forces. It explores how things move, why objects fall to the ground, and how light and sound travel. Physics helps us understand the laws that govern the universe, such as gravity and magnetism, and how these forces impact our everyday lives. It's like unraveling the secrets of how the world works, from the smallest particles to the vastness of space.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card natural-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">General Geology</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Geology is the science that studies the Earth's rocks, minerals, and processes that shape the Earth's surface. It helps us understand how mountains, valleys, and landforms are formed, as well as the forces that create them, like earthquakes and volcanoes. Geology also explores the Earth's history, including fossils, past climates, and natural resources. It's like being a detective of the Earth's story, uncovering the secrets of our planet's formation and changes over time.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card computer-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">General Mathematics</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Mathematics is the science that deals with numbers, quantities, shapes, and patterns. It involves studying concepts like addition, subtraction, multiplication, and division, as well as more advanced topics like geometry, algebra, and calculus. Mathematics helps us solve problems, make predictions, and understand the world around us through logical reasoning and precise calculations.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card computer-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">Algorithms</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Algorithms are step-by-step procedures or instructions for solving a problem or completing a task. They are like recipes that guide computers or humans in performing specific operations or achieving specific results. Algorithms are used in various fields, including computer science, mathematics, and everyday life. They are crucial for tasks such as sorting data, searching for information, and performing complex computations efficiently.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card computer-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">Programming languages</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Programming languages are tools used to write instructions or code that computers can understand and execute. They allow programmers to create software applications, websites, and other computer programs. Programming languages provide a way to communicate with computers, enabling us to give them commands and create functionalities. They come in different forms and have specific syntax and rules that programmers follow to write code.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card social-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">General Sociology</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Sociology is the scientific study of society, human behavior, and social relationships. It examines social institutions, such as family, education, religion, and government, and how they shape individuals and communities. Sociology explores topics like social interactions, cultural norms, social inequality, and social change. It helps us understand how societies are organized, how individuals are influenced by social factors, and how different groups interact and affect each other. Sociology provides valuable insights into the dynamics of human societies and helps us address social issues and challenges.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                        <div class="card social-sciences">
+                            <div class="front">
+                                <img src="images/classes/molecule.jpg" alt="Card Image" class="card-image">
+                                <div class="choose-card">
+                                    <h3 class="card-title">General Economics</h3>
+                                    <span class="item-checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                </div>
+                                <button class="desc show">Show Description</button>
+                            </div>
+                            <div class="back">
+                                <p>Economics is the social science that studies how individuals, businesses, and societies make decisions about the allocation of limited resources. It explores topics such as production, consumption, and distribution of goods and services. Economics helps us understand how markets work, how prices are determined, and how economic policies impact societies. It also examines concepts like supply and demand, inflation, unemployment, and economic growth. Economics provides insights into the choices we make as individuals and the functioning of the overall economy.</p>
+                                <button class="desc no-show">Don`t Show Description</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="start-studying">
+                        <button class="btn-body" id="start-studying">Start Studying</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="front-end/personal.js"></script>
+        
+    </body>
+</html>

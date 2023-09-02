@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JoyLearn - Chat</title>
+        <meta charset="utf-8">
+        <link href="styling/chat-style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <button class="btn" onclick="showCurriculum()">Curriculum</button>
+          <button class="btn" onclick="showClasses()">Classes</button>
+          <button class="btn" onclick="showProgress()">Progress</button>
+          <button class="btn" onclick="showAboutUs()">About Us</button>
+        </div>
+
+        <div class="navbar-right">
+          <button class="btn btn-w-icon" onclick="showPersonalAccount()"><i class="fa-regular fa-user"></i></button>
+          <button class="btn btn-w-icon btn-not" onclick="showNotifications()"><i class="fa-regular fa-bell"></i><p class="notifications-number"></p></button>
+          <div id="notifications-dropdown" class="dropdown">
+            <div class="dropdown-content">
+              <h3 class="dropdown-title">Notifications</h3>
+              <ul id="notifications-list" class="notifications-list">
+                <li class="notification">Notification 1</li>
+                <li class="notification">Notification 2</li>
+                <li class="notification">Notification 3</li>
+              </ul>
+              <button class="show-notifications">Show all notifications</button>
+            </div>
+          </div>
+          <button class="btn btn-w-icon active" onclick="showChat()"><i class="fa-regular fa-comments"></i></button>
+        </div>
+      </nav>
+      <div class="chat-container">
+        <div class="chat-header">
+          <h2>Chat</h2>
+        </div>
+        <div class="chat-window">
+          <div class="chat">
+            <ul class="messages-list"></ul>
+          </div>
+          <div class="creating-message">
+            <input type="text" class="input-message" placeholder="Message text">
+            <button class="btn-body attach-file"><i class="fa-solid fa-paperclip"></i></button>
+            <button class="btn-body send-message">Send</button>
+          </div>
+        </div>
+      </div>
+      <script src="front-end/chat.js"></script>
+    </body>
+</html>

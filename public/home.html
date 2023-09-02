@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JoyLearn</title>
+        <meta charset="utf-8">
+        <link href="styling/home_style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <button class="btn"><img src="images/brand.png"></button>
+            </div>
+
+            <div class="navbar-center">
+                <button class="btn" onclick="showAboutUs()">About us</button>
+                <button class="btn" onclick="showProgress()">Process</button>
+                <button class="btn" onclick="showQA()">Q&A</button>
+                <button class="btn" onclick="showContactUs()">Contact us</button>
+            </div>
+    
+            <div class="navbar-right" id="navbarRightContainer">
+                <button class="btn show-form-button"><i class="fa-regular fa-user main"></i></button>
+                <div class="container account-container">
+                    <i class="fas fa-times close-icon"></i>
+                    <div class="form-container register-container">
+                        <form class="account-form">
+                            <h2>Register here</h2>
+                            <div class="form-holder">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" class="form-control first-name-input validate-first-name" id="firstNameInput" placeholder="First Name">
+                                <p class="name-error-text">Name can contain only english characters</p>
+                                <p class="empty-text">This field can not be empty</p>
+                            </div>
+                            <div class="form-holder">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" class="form-control last-name-input validate-last-name" id="lastNameInput" placeholder="Last Name">
+                                <p class="name-error-text">Name can contain only English characters</p>
+                                <p class="empty-text">This field cannot be empty</p>
+                            </div>
+                            <div class="form-holder">
+                                <i class="fa-solid fa-phone"></i>
+                                <select class="country-code-select">
+                                    <option value="+1">US (+1)</option>
+                                    <option value="+7">RU (+7)</option>
+                                    <!-- Add more country options as needed -->
+                                </select>
+                                <input type="tel" class="form-control phone-input validate-phone" id="phoneInput" placeholder="(123)-456-78-90" inputmode="numeric">
+                                <p class="phone-error-text">Phone can contain only numbers</p>
+                                <p class="empty-text">This field can not be empty</p>
+                            </div>
+                            <div class="form-holder">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                            </div>
+                            <div class="form-holder">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+                            </div>
+                            <div class="form-holder">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password">
+                            </div>
+                            <button type="submit" class="btn-body btn-register">Register</button>
+                        </form>
+                    </div>
+                    <div class="form-container login-container">
+                        <form class="account-form">
+                          <h2>Log In Here</h2>
+                          <div class="form-holder">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" class="login-control" id="emailLoginInput" placeholder="Email">
+                          </div>
+                          <div class="form-holder">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" class="login-control" id="passwordLoginInput" placeholder="Password">
+                          </div>
+                          <a href="#">Forgot your password?</a>
+                          <button type="submit" class="btn-body btn-login">Log In</button>
+                        </form>
+                      </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h2>Welcome Back!</h2>
+                                <p>To keep connected with us please login with your personal info</p>
+                                <button class="ghost-btn login">Log In</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h2>Still not a member?</h2>
+                                <p>Enter your personal details and start studing with us</p>
+                                <button class="ghost-btn register">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="section section-desc">
+            <div class="container">
+              <h2>Free preschool education</h2>
+              <p>We are a team of creative minds with a passion for building amazing things.</p>
+              <img src="images/homepage.jpg" alt="homepage image" class="img-homepage">
+            </div>
+        </div>
+          
+        <div class="section section-about">
+            <div class="container">
+                <h2>About us</h2>
+                <div class="row">
+                    <div class="col left">
+                        <img src="images/about_us.jpg" alt="about_us image" class="img-fluid">
+                    </div>
+                    <div class="col right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante. In hac habitasse platea dictumst. Etiam euismod tortor id condimentum bibendum. Sed scelerisque ligula nec purus ullamcorper hendrerit.</p>
+                        <button class="btn-body btn-register">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-process">
+            <div class="container">
+                <h2>Process</h2>
+                <div class="row">
+                    <div class="col left">
+                        <div class="block">
+                            <div class="block-icon">
+                                <i class="fa-solid fa-laptop-file"></i>
+                            </div>
+                            <div class="content">
+                                <h3 class="block-title">Online classes</h3>
+                                <p class="block-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="block-icon">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+                            <div class="content">
+                                <h3 class="block-title">View progress</h3>
+                                <p class="block-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="block-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="content">
+                                <h3 class="block-title">Get certificates</h3>
+                                <p class="block-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="block-icon">
+                                <i class="fa-solid fa-question"></i>
+                            </div>
+                            <div class="content">
+                                <h3 class="block-title">Support and comunication</h3>
+                                <p class="block-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col right">
+                        <img src="images/process.jpg" alt="process" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-qa">
+            <div class="container">
+                <h2>Q&A</h2>
+                <div class="row">
+                    <div class="col left">
+                        <img src="images/QA.jpg" alt="image" class="img-fluid">
+                    </div>
+                    <div class="col right">
+                        <div class="qa">
+                            <div class="qa-content">
+                                <header>
+                                    <span class="qa-title">What will I get if become a member?</span>
+                                    <i class="fa-solid fa-plus"></i>
+                                </header>
+                                <p class="qa-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                            <div class="qa-content">
+                                <header>
+                                    <span class="qa-title">How old the child should be?</span>
+                                    <i class="fa-solid fa-plus"></i>
+                                </header>
+                                <p class="qa-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                            <div class="qa-content">
+                                <header>
+                                    <span class="qa-title">How much time in week do classes need?</span>
+                                    <i class="fa-solid fa-plus"></i>
+                                </header>
+                                <p class="qa-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                            <div class="qa-content">
+                                <header>
+                                    <span class="qa-title">How much does it cost?</span>
+                                    <i class="fa-solid fa-plus"></i>
+                                </header>
+                                <p class="qa-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                            <div class="qa-content">
+                                <header>
+                                    <span class="qa-title">Does the service provide certificates or diploma?</span>
+                                    <i class="fa-solid fa-plus"></i>
+                                </header>
+                                <p class="qa-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in porta ante.</p>
+                            </div>
+                        </div>
+                        <div class="qa-more">
+                            <button class="btn-body">Any other questions?</button>
+                            <div class="scroll-down">
+                                <i class="fa fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-questions">
+            <div class="container">
+                <h2>Contact us</h2>
+                <div class="row">
+                    <div class="col left">
+                        <div class="questions-form">
+                            <form>
+                                <div class="contact-form">
+                                    <div class="contact-icon">
+                                        <i class="fa-regular fa-user"></i>
+                                    </div>
+                                    <input type="text" id="contactName" class="contact-input" placeholder="Name">
+                                </div>
+                                <div class="contact-form">
+                                    <div class="contact-icon">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                    <input type="email" id="contactEmail" class="contact-input" placeholder="E-mail">
+                                </div>
+                                <div class="contact-form">
+                                    <div class="contact-icon">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <textarea id="formMessage" class="contact-message" rows="7" placeholder="Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn-body">Send message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col right">
+                        <img src="images/contact.jpg" alt="image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="front-end/raw.githubusercontent.com_jlmakes_scrollreveal_master_dist_scrollreveal.min.js"></script>
+        <script src="front-end/home.js"></script>
+    </body>
+</html>

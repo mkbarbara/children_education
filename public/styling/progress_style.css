@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    margin: 40px;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.navbar-left {
+	float: left;
+}
+
+.navbar-right {
+	float: right;
+  display: flex;
+}
+
+.navbar .btn {
+  display: inline-block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0px;
+  background-color: transparent;
+  border: none;
+}
+
+.navbar .btn i {
+  font-size: 20px;
+}
+
+.btn.btn-not {
+  margin-right: 10px;
+  position: relative;
+}
+
+.notifications-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 1;
+  margin: 12px 0;
+}
+
+.navbar .btn:hover {
+	background-color: #c0c0c0;
+	color: black;
+  cursor: pointer;
+}
+
+.navbar .btn.active {
+	background-color: #6e93f7;
+  color: #fff;
+}
+
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar .dropdown-content {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  padding: 0 20px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.navbar .dropdown-content.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar .dropdown-title {
+  margin: 0;
+  padding: 10px;
+}
+
+.navbar .notifications-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .notification {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar .show-notifications {
+  width: 100%;
+  padding: 10px;
+  background-color: #6e93f7;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.navbar .show-notifications:hover {
+  background-color: #0069d9;
+}
+
+/* START FIRST PART */
+
+.progress-tracker {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.progress-block {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.progress-block h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: lightgray;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-completed {
+    height: 100%;
+    background-color: #6e93f7;
+}
+
+/* STOP FIRST PART */
+
+.timeline {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    height: 60px;
+}
+
+.dropdowns .dropdown {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 80px auto 30px;
+}
+  
+.select-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.select-btn .btn-text {
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+}
+
+.select-btn .arrow-down {
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background-color: #6e93f7;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.select-btn.open .arrow-down {
+    transform: rotate(-180deg);
+}
+  
+.list-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    display: none;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    height: 200px;
+}
+
+.select-btn.open ~ .list-items {
+    display: block;
+}
+
+.list-items .item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.list-items .item:hover {
+    background-color: #e7edfe;
+}
+
+.item .item-text {
+    font-size: 16px;
+    font-weight: 400px;
+    color: #333
+}
+
+.item .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.item.checked .checkbox {
+    background-color: #407ef4;
+    border-color: #407ef4;
+}
+
+.checkbox .check-icon {
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.item.checked .check-icon{
+    transform: scale(1);
+}
+
+.graph-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#myChart {
+    max-width: 1000px;
+    height: 600px;
+    width: 1000px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.legend-color {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.chemistry {
+    background-color: #407ef4;
+}
+
+.maths {
+    background-color: #39ac39;
+}
+
+.english {
+    background-color: #f1c40f;
+}
+
+/* STOP THIRD PART */
+  
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin: 0px 20px 20px 20px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 80px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.badge-item.gray:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+.badge-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    filter: grayscale(0%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.badge-item.gray {
+    filter: grayscale(100%);
+}
+
+.badge-desc {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+.badge-item.gray .badge-desc {
+    display: none;
+}
+
+.badge-item.gray:hover .badge-desc {
+    display: block;
+}
+
+/* STOP FORTH PART */
+
+.certificate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.progress-tracker-title.certificates {
+    margin-bottom: 0px;
+}
+
+.certificates-desc {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.left {
+    flex-grow: 1;
+}
+
+.right {
+    margin-left: 20px;
+    display: flex;
+}
+
+.percentage {
+    font-weight: bold;
+    color: #007aff;
+}
+
+.download, .share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6e93f7;
+    border: none;
+    margin: 8px;
+}
+
+.download .download-text, .share .share-text {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.download .download-icon, .share .share-icon {
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+}
+
+.download:hover, .share:hover {
+    background-color: #0069d9;
+}
+
+.download[disabled],
+.share[disabled] {
+    background-color: #ddd;
+    color: #888;
+    cursor: not-allowed;
+}

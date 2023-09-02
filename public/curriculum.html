@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JoyLearn - Curriculum</title>
+        <meta charset="utf-8">
+        <link href="styling/curriculum_style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+              <button class="btn active" onclick="showCurriculum()">Curriculum</button>
+              <button class="btn" onclick="showClasses()">Classes</button>
+              <button class="btn" onclick="showProgress()">Progress</button>
+              <button class="btn" onclick="showAboutUs()">About Us</button>
+            </div>
+    
+            <div class="navbar-right">
+              <button class="btn btn-w-icon" onclick="showPersonalAccount()"><i class="fa-regular fa-user"></i></button>
+              <button class="btn btn-w-icon btn-not" onclick="showNotifications()"><i class="fa-regular fa-bell"></i><p class="notifications-number"></p></button>
+              <div id="notifications-dropdown" class="dropdown">
+                <div class="dropdown-content">
+                  <h3 class="dropdown-title">Notifications</h3>
+                  <ul id="notifications-list" class="notifications-list">
+                    <li class="notification">Notification 1</li>
+                    <li class="notification">Notification 2</li>
+                    <li class="notification">Notification 3</li>
+                  </ul>
+                  <button class="show-notifications">Show all notifications</button>
+                </div>
+              </div>
+              <button class="btn btn-w-icon" onclick="showChat()"><i class="fa-regular fa-comments"></i></button>
+            </div>
+        </nav>
+        <div id="calendar">
+            <div class="container">
+                <div class="calendar-container">
+                    <header>
+                        <p><span id="current-month" class="current-month"></span></p>
+                        <p><span id="current-year" class="current-year"></span></p>
+                        <button id="prev-month" class="prev-month">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button id="next-month" class="next-month">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </header>
+                    <table class="calendar">
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="curriculum-container" class="curriculum-container">
+            <h2 id="day-title" class="day-title"></h2>
+            <div class="curriculum-events" id="curriculum-events"></div>
+            <img class="curriculum-image" src="images/calendar.jpg">
+        </div>
+        <script src="front-end/raw.githubusercontent.com_jlmakes_scrollreveal_master_dist_scrollreveal.min.js"></script>
+        <script src="front-end/curriculum.js"></script>
+    </body>
+</html>

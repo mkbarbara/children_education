@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>JoyLearn - Chemistry. Class 1</title>
+      <meta charset="utf-8">
+      <link href="styling/class_style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <button class="btn" onclick="showCurriculum()">Curriculum</button>
+        <button class="btn" onclick="showClasses()">Classes</button>
+        <button class="btn" onclick="showProgress()">Progress</button>
+        <button class="btn" onclick="showAboutUs()">About Us</button>
+      </div>
+
+      <div class="navbar-right">
+        <button class="btn btn-w-icon" onclick="showPersonalAccount()"><i class="fa-regular fa-user"></i></button>
+        <button class="btn btn-w-icon btn-not" onclick="showNotifications()"><i class="fa-regular fa-bell"></i><p class="notifications-number"></p></button>
+        <div id="notifications-dropdown" class="dropdown">
+          <div class="dropdown-content">
+            <h3 class="dropdown-title">Notifications</h3>
+            <ul id="notifications-list" class="notifications-list">
+              <li class="notification">Notification 1</li>
+              <li class="notification">Notification 2</li>
+              <li class="notification">Notification 3</li>
+            </ul>
+            <button class="btn-body show-notifications">Show all notifications</button>
+          </div>
+        </div>
+        <button class="btn btn-w-icon" onclick="showChat()"><i class="fa-regular fa-comments"></i></button>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="title">Chemistry. Class 1</h1>
+      <div class="func-container">
+        <div class="video-container show-controls">
+          <div class="wrapper">
+            <div class="video-timeline">
+              <div class="progress-area">
+                  <span>00:00</span>
+                  <div class="progress-bar"></div>
+              </div>
+            </div>
+            <ul class="video-controls">
+              <li class="options left">
+                  <button class="volume"><i class="fa-solid fa-volume-low"></i></button>
+                  <input type="range" min="0" max="1" step="any">
+                  <div class="video-timer">
+                      <p class="current-time">00:00</p>
+                      <p class="separator"> / </p>
+                      <p class="video-duration">00:00</p>
+                  </div>
+              </li>
+              <li class="options center">
+                  <button class="skip-backward"><i class="fas fa-backward"></i></button>
+                  <button class="play-pause"><i class="fas fa-play"></i></button>
+                  <button class="skip-forward"><i class="fas fa-forward"></i></button>
+              </li>
+              <li class="options right">
+                  <div class="playback-content">
+                      <button class="playback-speed"><i class="fa-brands fa-vimeo-v"></i></button>
+                      <ul class="speed-options">
+                        <li data-speed="2">2x</li>
+                        <li data-speed="1.5">1.5x</li>
+                        <li data-speed="1" class="active">1x</li>
+                        <li data-speed="0.75">0.75x</li>
+                        <li data-speed="0.5">0.5x</li>
+                      </ul>
+                  </div>
+                  <button class="fullscreen"><i class="fa-solid fa-expand"></i></button>
+              </li>
+            </ul>
+          </div>
+          <video src="videos/chemistry class 1.mp4" poster="images/lessons/chemistry class 1.jpg"></video>
+        </div>
+
+        <div class="materials">
+          <div class="buttons-container">
+            <button class="func-btn text-btn active-btn">Text</button>
+            <button class="func-btn notes-btn">Notes</button>
+          </div>
+          
+          <div class="text-section">
+            <p data-start-time="0" data-end-time="7" class="active-text">Hello, young learner. Today we will be exploring the wonderful world of chemistry.</p>
+            <p data-start-time="8" data-end-time="27">Chemistry is all about the different types of matter in the world around us. Matter is anything that takes up space and has weight. Everything you can see and touch is made up of matter. This includes things like toys, books, food and even the air we breathe.</p>
+            <p data-start-time="28" data-end-time="53">Scientists who study chemistry are called chemists. They use special tools and equipment to learn more about the different types of matter and how they interact with each other. One of the fun things about chemistry is that it allows us to mix different materials together to create new things. For example, if you mix flour, sugar, eggs and butter together you can make delicious cookies.</p>
+            <p data-start-time="54" data-end-time="81">In chemistry, we also learn about atoms and molecules. Atoms are tiny particles that make up everything around us. They are so small that you can't even see them with your eyes. Molecules are groups of atoms that are stuck together. Have you ever blown up a balloon? When you blow up a balloon, you are filling it up with air molecules. These molecules push against the walls of the balloon and make it expand</p>
+            <p data-start-time="82" data-end-time="99">Chemistry is also important for understanding how our bodies work. Our bodies are made up of different chemicals and compounds. We need these chemicals for our bodies to function properly. For example, we need oxygen from the air we breathe to help our bodies make energy.</p>
+            <p data-start-time="100" data-end-time="116">Another important part of chemistry is learning about safety. Some chemicals can be dangerous if not handled properly. It's important to always ask an adult for help when working with any kind of chemicals or doing experiments.</p>
+            <p data-start-time="117" data-end-time="130">Chemistry is a big part of our everyday lives, from the food we eat to the air we breathe. As you continue to grow and explore the world around you you will learn more about the fascinating science of chemistry.</p>
+          </div>
+
+          <div class="notes-section">
+            <div class="add-note-title">Enter your note:</div>
+            <div class="add-note">
+              <textarea class="note-input" rows="3" placeholder="Note text"></textarea>
+              <button class="func-btn add-note-btn">Add Note</button>
+            </div>
+            <ul class="notes-list">
+            </ul>
+            <div class="confirmation-popup">
+              <p class="popup-message">Are you sure you want to delete this note?</p>
+              <div class="popup-buttons">
+                  <button class="func-btn yes-button">Yes</button>
+                  <button class="func-btn no-button">No</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="front-end/class.js"></script>
+  </body>
+</html>

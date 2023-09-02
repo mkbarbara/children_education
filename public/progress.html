@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JoyLearn - Progress</title>
+        <meta charset="utf-8">
+        <link href="styling/progress_style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+              <button class="btn" onclick="showCurriculum()">Curriculum</button>
+              <button class="btn" onclick="showClasses()">Classes</button>
+              <button class="btn active" onclick="showProgress()">Progress</button>
+              <button class="btn" onclick="showAboutUs()">About Us</button>
+            </div>
+    
+            <div class="navbar-right">
+              <button class="btn btn-w-icon" onclick="showPersonalAccount()"><i class="fa-regular fa-user"></i></button>
+              <button class="btn btn-w-icon btn-not" onclick="showNotifications()"><i class="fa-regular fa-bell"></i><p class="notifications-number"></p></button>
+              <div id="notifications-dropdown" class="dropdown">
+                <div class="dropdown-content">
+                  <h3 class="dropdown-title">Notifications</h3>
+                  <ul id="notifications-list" class="notifications-list">
+                    <li class="notification">Notification 1</li>
+                    <li class="notification">Notification 2</li>
+                    <li class="notification">Notification 3</li>
+                  </ul>
+                  <button class="show-notifications">Show all notifications</button>
+                </div>
+              </div>
+              <button class="btn btn-w-icon" onclick="showChat()"><i class="fa-regular fa-comments"></i></button>
+            </div>
+        </nav>
+        <div class="progress-tracker">
+            <h1 class="progress-tracker-title">Progress tracker</h1>
+            <div class="progress-block">
+                <h2>Chemistry</h2>
+                <div class="progress-bar">
+                    <div class="progress-completed" style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="progress-block">
+                <h2>Maths</h2>
+                <div class="progress-bar">
+                    <div class="progress-completed" style="width: 30%;"></div>
+                </div>
+            </div>
+            <div class="progress-block">
+                <h2>English</h2>
+                <div class="progress-bar">
+                    <div class="progress-completed" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="timeline">
+            <h1 class="progress-tracker-title">Study timeline</h1>
+            <div class="dropdowns">
+                <div class="dropdown subjects">
+                    <div class='select-btn'>
+                        <span class="btn-text">Select Subjects</span>
+                        <span class="arrow-down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="list-items">
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Chemistry</span>
+                        </li>
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Maths</span>
+                        </li>
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">English</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown task-types">
+                    <div class='select-btn'>
+                        <span class="btn-text">Select Task Types</span>
+                        <span class="arrow-down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="list-items">
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Hometasks</span>
+                        </li>
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Control Works</span>
+                        </li>
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">Project Works</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown months">
+                    <div class='select-btn'>
+                        <span class="btn-text">Select Month</span>
+                        <span class="arrow-down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="list-items">
+                        <li class="item">
+                            <span class="item-text">September</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">October</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">November</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">December</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">January</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">February</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">March</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">April</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">May</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">June</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">July</span>
+                        </li>
+                        <li class="item">
+                            <span class="item-text">August</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="graph-section">
+                <canvas id="myChart"></canvas>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color chemistry"></div>
+                        <div class="legend-text">Chemistry</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color maths"></div>
+                        <div class="legend-text">Maths</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color english"></div>
+                        <div class="legend-text">English</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="badge-section">
+            <h1 class="progress-tracker-title">Achievments</h1>
+            <div class="badge-row">
+                <div class="badge-item">
+                    <img src="images/first-badge.jpg" alt="Blue Badge">
+                    <p class="badge-desc">First Badge Description</p>
+                </div>
+                <div class="badge-item">
+                    <img src="images/second-badge.jpg" alt="Green Badge">
+                    <p class="badge-desc">Second Badge Description</p>
+                </div>
+                <div class="badge-item gray">
+                    <img src="images/third-badge.jpg" alt="Gray Badge">
+                    <p class="badge-desc">Third Badge Description</p>
+                </div>
+                <div class="badge-item gray">
+                    <img src="images/forth-badge.jpg" alt="Gray Badge">
+                    <p class="badge-desc">Forth Badge Description</p>
+                </div>
+                <div class="badge-item gray">
+                    <img src="images/fifth-badge.jpg" alt="Gray Badge">
+                    <p class="badge-desc">Fifth Badge Description</p>
+                </div>
+                <div class="badge-item gray">
+                    <img src="images/sixth-badge.jpg" alt="Gray Badge">
+                    <p class="badge-desc">Sixth Badge Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="certificates">
+            <h1 class="progress-tracker-title certificates">Certificates</h1>
+            <p class="certificates-desc">You need at least 75% to get a certificate</p>
+            <div class="certificate">
+                <div class="left">
+                    <h3>Chemistry</h3>
+                    <p>Completed: <span class="percentage">55%</span></p>
+                </div>
+                <div class="right">
+                    <button class="download" disabled>
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">
+                            <i class="fa-solid fa-download mr-3"></i>
+                        </span>
+                    </button>
+                    <button class="share" disabled>
+                        <span class="share-text">Share</span>
+                        <span class="share-icon">
+                            <i class="far fa-share-square"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="certificate">
+                <div class="left">
+                    <h3>Maths</h3>
+                    <p>Completed: <span class="percentage">88%</span></p>
+                </div>
+                <div class="right">
+                    <button class="download">
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">
+                            <i class="fa-solid fa-download mr-3"></i>
+                        </span>
+                    </button>
+                    <button class="share">
+                        <span class="share-text">Share</span>
+                        <span class="share-icon">
+                            <i class="far fa-share-square"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="certificate">
+                <div class="left">
+                    <h3>English</h3>
+                    <p>Completed: <span class="percentage">100%</span></p>
+                </div>
+                <div class="right">
+                    <button class="download">
+                        <span class="download-text">Download</span>
+                        <span class="download-icon">
+                            <i class="fa-solid fa-download mr-3"></i>
+                        </span>
+                    </button>
+                    <button class="share">
+                        <span class="share-text">Share</span>
+                        <span class="share-icon">
+                            <i class="far fa-share-square"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script src="front-end/progress.js"></script>
+    </body>
+</html>
