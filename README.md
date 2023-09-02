@@ -1,7 +1,7 @@
 ## About
 
 This is a project for children education website using HTML, CSS, JavaScript for frontend, mySQL for database handling and nodejs, express, nodemailer for the backend.\
-You need to create your own mySQL database usersData with tables - users, usersmessages and classes and provide your creditals in server.js file to make back-end work correctly
+You need to create your own mySQL database usersData with tables - users, usersmessages and classes and provide your creditals in server.js file to make backend work correctly
 
 ## Getting started
 
